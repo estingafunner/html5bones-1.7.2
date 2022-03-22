@@ -7,12 +7,12 @@ function Testi() {
   window.alert("Testing Clickable H2...");
 }
 
-const bclick = document.getElementById('buttonPull');
-	bclick.addEventListener('click', Testi);
+
 
 //document.getElementById("buttonPull").addEventListener("click", Testi);
 /*
-
+const bclick = document.getElementById('buttonPull');
+	bclick.addEventListener('click', Testi);
 
 
 ! function(a, b) {
