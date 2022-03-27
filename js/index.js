@@ -1,14 +1,22 @@
 
+import fetch from 'node-fetch';
+
+global.fetch = fetch
+global.Headers = fetch.Headers;
+
 
 const https = require('https');
 var fs = require('fs');
-var fetch = require('node-fetch');
+//var fetch = require('node-fetch');
+
+let nowish = (new Date().getTime()) - 3;
 
 const id = 'DCHBKYZF5NMXHCV8AG4M1J53DFDONO8Z';
 const secret = 'WV0KBNNCRLP0SO3CYZMOGFQATYTPG2Y';
 
+const fetch = require("node-fetch");
 
-let myHeaders = new Headers();
+let myHeaders = new fetch.Headers();
 myHeaders.append("Authorization", "Basic e3thcGlVTn19Ont7YXBpUGFzc319");
 
 var requestOptions = {
@@ -35,21 +43,21 @@ fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?tasks=5&status=0", requestOpti
 
 var req = https.request(options, function (res) {
     var chunks = [];
-  
+
     res.on("data", function (chunk) {
       chunks.push(chunk);
     });
-  
+
     res.on("end", function (chunk) {
       var body = Buffer.concat(chunks);
       console.log(body.toString());
     });
-  
+
     res.on("error", function (error) {
       console.error(error);
     });
   });
-  
+
   req.end(); */
 
 
@@ -82,7 +90,3 @@ var req = https.request(options, function (res) {
 
 
 req.end(); */
-
-
-
-
