@@ -1,8 +1,19 @@
+import fetch, {
+  Blob,
+  blobFrom,
+  blobFromSync,
+  File,
+  fileFrom,
+  fileFromSync,
+  FormData,
+  Headers,
+  Request,
+  Response,
+} from 'node-fetch'
+//import fetch from 'node-fetch';
 
-import fetch from 'node-fetch';
-
-global.fetch = fetch
-global.Headers = fetch.Headers;
+//global.fetch = fetch;
+//global.Headers = fetch.Headers;
 
 
 const https = require('https');
@@ -14,7 +25,7 @@ let nowish = (new Date().getTime()) - 3;
 const id = 'DCHBKYZF5NMXHCV8AG4M1J53DFDONO8Z';
 const secret = 'WV0KBNNCRLP0SO3CYZMOGFQATYTPG2Y';
 
-const fetch = require("node-fetch");
+//let fetch = require("node-fetch");
 
 let myHeaders = new fetch.Headers();
 myHeaders.append("Authorization", "Basic e3thcGlVTn19Ont7YXBpUGFzc319");
