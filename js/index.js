@@ -33,7 +33,7 @@ const requestOptions = {
   }
 };
 
-fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?tasks=5&status=0", requestOptions)
+fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?tasks=5&status=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
