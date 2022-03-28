@@ -16,7 +16,7 @@ global.Headers = fetch.Headers;
 
 //let nowish = (new Date().getTime()) - 3;
 
-function Tesi() {
+//function Tesi() {
 const id = 'DCHBKYZF5NMXHCV8AG4M1J53DFDONO8Z';
 const secret = 'WV0KBNNCRLP0SO3CYZMOGFQATYTPG2Y';
 
@@ -37,7 +37,7 @@ fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?tasks=5&status=0", requestOpti
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-}
+//}
 
 
 /////////
