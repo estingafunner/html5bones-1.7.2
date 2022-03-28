@@ -14,7 +14,7 @@ import fetch, {
 global.fetch = fetch;
 global.Headers = fetch.Headers;
 
-let nowish = (new Date().getTime()) - 3;
+let nowish = (new Date().getTime());
 console.log(nowish);
 
 //function Tesi() {
@@ -34,12 +34,14 @@ const requestOptions = {
   }
 };
 
-fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/", requestOptions)
-
+fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?limit=5", requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-//}
+
+
+
+
 
 
 /////////
