@@ -14,7 +14,8 @@ import fetch, {
 global.fetch = fetch;
 global.Headers = fetch.Headers;
 
-//let nowish = (new Date().getTime()) - 3;
+let nowish = (new Date().getTime()) - 3;
+console.log(nowish);
 
 //function Tesi() {
 const id = 'DCHBKYZF5NMXHCV8AG4M1J53DFDONO8Z';
@@ -33,8 +34,9 @@ const requestOptions = {
   }
 };
 
-fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/?tasks=5&status=1", requestOptions)
-  .then(response => response.text())
+fetch("HTTPS:////api.limblecmms.com:443/v2/tasks/", requestOptions)
+
+  .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 //}
